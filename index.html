@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Shopping</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body onload="load()">
+    <!-- header and navigation-->
+    <header>
+        <h1>Express Shopping</h1>
+        <nav class="nav nav-pills">
+            <ul class="navbar justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link btn btn-primary" href="#" >Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-primary" href="#AboutSection" >about</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-primary" href="#GoogleMap" >contact us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <!-- Sliding cart-->
+    <div class="cart">
+        <i class="fa-solid fa-circle-arrow-left"> show cart</i>
+        <i class="fa-solid fa-cart-shopping"></i>
+        <div class="slider">Your cart !<hr></div>
+
+    </div>
+
+    <!-- About section -->
+    <Div class="about row" id="AboutSection">
+        <div class="col">
+            <p class="center"> WHO WE ARE </p>
+            <p> Express Shopping Fashion is a go-to luxury shopping destination for designer fashion without the
+                designer
+                price tag.</p>
+
+            <p>Since 2020, Express Shopping Fashion has made designer fashion accessible to the high street. With over
+                50
+                brands and counting, the ever-growing brand directory means Express Shopping Fashion has access to the
+                most in-demand pieces, from the
+                newest labels to the most established international fashion
+                houses.</p>
+
+            <p> Express Shopping Fashion is a Egypt based, family run, online shopping, offering an exclusive edit of
+                some of the world's most
+                prestigious designer womenswear, menswear and accessory brands.
+            </p>
+
+            <p>Delivering quality clothing at affordable pricing, while showcasing unique and limited-edition exclusives
+                internationally.
+            </p>
+            <br>
+        </div>
+        <div class="col IMGdiv">
+            <img src="images/aboutPage.png" class="img-fluid">
+        </div>
+    </Div>
+
+    <!-- main section and cards-->
+    <div class="container align-items-start justify-content-start" id="container">
+        <div class="row no-gutters" style="margin-top: 60px;">
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card">
+                    <img src="images/1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">beach flip flop</h5>
+                        <p class="card-text">specially for men in the summer</p>
+                        <span class="price">200 LE</span><br>
+                        <a href="#" class="btn btn-primary btn-sm Buy" onclick="BuyForm()">Buy Now</a>
+                        <a href="#" class="btn btn-primary btn-sm Add" onclick="addToCart(this.parentElement.parentElement)">ِAdd to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card">
+                    <img src="images/2.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">comfortable slipper for men</h5>
+                        <p class="card-text">use it for long walk </p>
+                        <span class="price">250 LE</span><br>
+                        <a href="#" class="btn btn-primary btn-sm Buy" onclick="BuyForm()">Buy Now</a>
+                        <a href="#" class="btn btn-primary btn-sm Add" onclick="addToCart(this.parentElement.parentElement)">ِAdd to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card">
+                    <img src="images/3.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">baby girl floral</h5>
+                        <p class="card-text">Baby Girls' Elegant Floral Pattern Mesh Spliced Multi-Layered Strap Dress,
+                            Spring/Summer.</p>
+                        <span class="price">300 LE</span><br>
+                        <a class="btn btn-primary btn-sm Buy" onclick="BuyForm()">Buy Now</a>
+                        <a href="#" class="btn btn-primary btn-sm Add" onclick="addToCart(this.parentElement.parentElement)">ِAdd to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card">
+                    <img src="images/4.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Cozy Cub Baby Girlt</h5>
+                        <p class="card-text">Cozy Cub Baby Girl Floral Print Ruffle Hem Waist Cinched Dress.</p>
+                        <span class="price">320 LE</span><br>
+                        <a href="#" class="btn btn-primary btn-sm Buy" onclick="BuyForm()">Buy Now</a>
+                        <a href="#" class="btn btn-primary btn-sm Add" onclick="addToCart(this.parentElement.parentElement)">ِAdd to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card">
+                    <img src="images/5.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Baby Girl Dress</h5>
+                        <p class="card-text">Baby Girl Sunflower Print Cold Shoulder Ruffle Trim Dress.</p>
+                        <span class="price">330 LE</span><br>
+                        <a href="#" class="btn btn-primary btn-sm Buy" onclick="BuyForm()">Buy Now</a>
+                        <a href="#" class="btn btn-primary btn-sm Add" onclick="addToCart(this.parentElement.parentElement)">ِAdd to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card">
+                    <img src="images/6.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">baby boy summer cartoon</h5>
+                        <p class="card-text">Casual Coconut Tree Print Short Sleeve Shirt And Shorts Set For Holiday
+                            Summer
+                        </p>
+                        <span class="price">330 LE</span><br>
+                        <a href="#" class="btn btn-primary btn-sm Buy" onclick="BuyForm()">Buy Now</a>
+                        <a href="#" class="btn btn-primary btn-sm Add" onclick="addToCart(this.parentElement.parentElement)">ِAdd to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card">
+                    <img src="images/7.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">baby boy casual</h5>
+                        <p class="card-text">Baby Boy 2pcs Casual Everyday Simple Love & Letter Print Outfit Set For
+                            Spring/Summer</p>
+                        <span class="price">430 LE</span><br>
+                        <a href="#" class="btn btn-primary btn-sm Buy" onclick="BuyForm()">Buy Now</a>
+                        <a href="#" class="btn btn-primary btn-sm Add" onclick="addToCart(this.parentElement.parentElement)">ِAdd to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card">
+                    <img src="images/8.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Baby boy set</h5>
+                        <p class="card-text">Baby Boy Button-Up Short Sleeve Top And Overall Shorts Set.</p>
+                        <span class="price">400 LE</span><br>
+                        <a href="#" class="btn btn-primary btn-sm Buy" onclick="BuyForm()">Buy Now</a>
+                        <a href="#" class="btn btn-primary btn-sm Add" onclick="addToCart(this.parentElement.parentElement)">ِAdd to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card">
+                    <img src="images/9.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Newborn Baby Boys</h5>
+                        <p class="card-text">Newborn Baby Boys' Palm Leaf Printed Vest And Shorts Casual Vacation 2pcs
+                            Outfit.</p>
+                        <span class="price">350 LE</span><br>
+                        <a href="#" class="btn btn-primary btn-sm Buy" onclick="BuyForm()">Buy Now</a>
+                        <a href="#" class="btn btn-primary btn-sm Add" onclick="addToCart(this.parentElement.parentElement)">ِAdd to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card">
+                    <img src="images/10.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">baby boy casual</h5>
+                        <p class="card-text">2pcs Baby Boys' Casual Daily Wear Sporty Letter Print Jacket And Pants Set.
+                        </p>
+                        <span class="price">690 LE</span><br>
+                        <a href="#" class="btn btn-primary btn-sm Buy" onclick="BuyForm()">Buy Now</a>
+                        <a href="#" class="btn btn-primary btn-sm Add" onclick="addToCart(this.parentElement.parentElement)">ِAdd to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card">
+                    <img src="images/11.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Cozy Cub Baby Boys</h5>
+                        <p class="card-text">Cozy Cub Baby Boys' Color Block Round Neck Short Sleeve Top And Sports
+                            Short Set.</p>
+                        <span class="price">530 LE</span><br>
+                        <a href="#" class="btn btn-primary btn-sm Buy" onclick="BuyForm()">Buy Now</a>
+                        <a href="#" class="btn btn-primary btn-sm Add" onclick="addToCart(this.parentElement.parentElement)">ِAdd to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card">
+                    <img src="images/12.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">baby boy set</h5>
+                        <p class="card-text">Baby Boy Letter Print Color Block T-Shirt And Shorts Casual Simple Set
+                            Suitable for Summer Outfits.</p>
+                        <span class="price">400 LE</span><br>
+
+                        <a href="#" class="btn btn-primary btn-sm Buy" onclick="BuyForm()">Buy Now</a>
+                        <a href="#" class="btn btn-primary btn-sm Add" onclick="addToCart(this.parentElement.parentElement)">ِAdd to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- footer and google map-->
+    <footer>
+        <div id="GoogleMap" class="GoogleMap">
+            <h3> Please select your location to find the nearest store for you!</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1728.289023284488!2d30.939781538440204!3d29.962813417474514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14585798002f231f%3A0x3252731fe5a63649!2z2YXZhtiy2YQg2YXYrdmF2K8g2K3Ys9mG!5e0!3m2!1sen!2seg!4v1721314556791!5m2!1sen!2seg"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <!--   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&libraries=maps,marker&v=beta" defer>
+    </script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
